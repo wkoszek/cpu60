@@ -9,5 +9,5 @@ clean:
 	rm -rf cpu60
 
 test:	cpu60
-	./cpu60 < tests/prog.0.t > tests/prog.0.a
+	./cpu60 -r < tests/prog.0.t > tests/prog.0.a
 	diff -u tests/prog.0.o tests/prog.0.a

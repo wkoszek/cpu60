@@ -1,9 +1,9 @@
-reg0=a7   reg1=f1   reg2=d9   reg3=2a   reg4=82   reg5=c8   reg6=d8   reg7=fe  
-reg0=00   reg1=f1   reg2=d9   reg3=2a   reg4=82   reg5=c8   reg6=d8   reg7=fe sub r0,r0,r0 
-reg0=00   reg1=00   reg2=d9   reg3=2a   reg4=82   reg5=c8   reg6=d8   reg7=fe mov r1,r0 
-reg0=00   reg1=00   reg2=00   reg3=2a   reg4=82   reg5=c8   reg6=d8   reg7=fe mov r2,r0 
-reg0=00   reg1=00   reg2=00   reg3=00   reg4=82   reg5=c8   reg6=d8   reg7=fe mov r3,r0 
-reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=c8   reg6=d8   reg7=fe mov r4,r0 
-reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=d8   reg7=fe mov r5,r0 
-reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=fe mov r6,r0 
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00  
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 sub r0,r0,r0 
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 mov r1,r0 
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 mov r2,r0 
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 mov r3,r0 
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 mov r4,r0 
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 mov r5,r0 
+reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 mov r6,r0 
 reg0=00   reg1=00   reg2=00   reg3=00   reg4=00   reg5=00   reg6=00   reg7=00 mov r7,r0 
