@@ -13,7 +13,7 @@ main(int argc, char **argv)
 	int	i, i0, i1, i2, v2, o, reset_perform;
 
 	reset_perform = 0;
-	while ((o = getopt(argc, argv, "r:")) != -1) {
+	while ((o = getopt(argc, argv, "r")) != -1) {
 		switch (o) {
 		case 'r':
 			reset_perform++;
