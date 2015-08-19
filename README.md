@@ -1,5 +1,7 @@
 # Simple CPU model written in 60 lines of code
 
+[![Build Status](https://travis-ci.org/wkoszek/cpu60.svg)](https://travis-ci.org/wkoszek/cpu60)
+
 CPU60 is a simple CPU model written in 60 lines of C code.
 
 It supports 8 registers and several simple instructions: `mov`, `add`,
