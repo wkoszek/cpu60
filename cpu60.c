@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
 
@@ -10,15 +11,14 @@ main(int argc, char **argv)
 {
 	uint8_t	regs[8];
 	char	buf[1000];
-	int	i, i0, i1, i2, v2, o, reset_perform;
+	int	i, i0, i1, i2, v2, reset_perform;
 
 	reset_perform = 0;
-	while ((o = getopt(argc, argv, "r")) != -1) {
-		switch (o) {
-		case 'r':
-			reset_perform++;
-			break;
-		}
+	if (argc == 2 && (strcmp(argv[1], "-r") == 0)) {
+		reset_perform++;
+	}
+	for (i = 0; i < sizeof(regs)/sizeof(regs[0]); i++) {
+		regs[i] = reset_perform ? 0 : rand();
 	}
 
 	buf[0] = '\0';
