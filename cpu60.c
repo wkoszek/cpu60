@@ -10,10 +10,9 @@ main(int argc, char **argv)
 {
 	uint8_t	regs[8];
 	char	buf[1000];
-	int	i, i0, i1, i2, v0, v1, v2, rv, o, reset_perform;
-	char	lines_buf[128][128];
+	int	i, i0, i1, i2, v2, o, reset_perform;
 
-	buf[0] = reset_perform = 0;
+	reset_perform = 0;
 	while ((o = getopt(argc, argv, "r:")) != -1) {
 		switch (o) {
 		case 'r':
@@ -22,6 +21,7 @@ main(int argc, char **argv)
 		}
 	}
 
+	buf[0] = '\0';
 	do {
 		if (sscanf(buf, "mov r%d,r%d", &i0, &i1) == 2) {
 			regs[i0 % 8] = regs[i1 % 8];
