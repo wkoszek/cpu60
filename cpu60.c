@@ -35,19 +35,19 @@ main(int argc, char **argv)
 		if (sscanf(buf, "sub r%d,r%d,r%d", &i0, &i1, &i2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] - regs[i2 % 8];
 		}
-		if (sscanf(buf, "subi r%d,r%d,r%d", &i0, &i1, &v2) == 3) {
+		if (sscanf(buf, "subi r%d,r%d,%d", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] - v2;
 		}
 		if (sscanf(buf, "and r%d,r%d,r%d", &i0, &i1, &i2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] & regs[i2 % 8];
 		}
-		if (sscanf(buf, "andi r%d,r%d,r%d", &i0, &i1, &v2) == 3) {
+		if (sscanf(buf, "andi r%d,r%d,%d", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] & v2;
 		}
 		if (sscanf(buf, "or r%d,r%d,r%d", &i0, &i1, &i2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] | regs[i2 % 8];
 		}
-		if (sscanf(buf, "ori r%d,r%d,r%d", &i0, &i1, &v2) == 3) {
+		if (sscanf(buf, "ori r%d,r%d,%d", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] | v2;
 		}
 		buf[MAX(0, strlen(buf) - 1)] = 0;
