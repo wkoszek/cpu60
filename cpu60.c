@@ -50,11 +50,11 @@ main(int argc, char **argv)
 		if (sscanf(buf, "ori r%u,r%u,%u", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] | v2;
 		}
-		buf[MAX(0, strlen(buf) - 1)] = 0;
+		buf[MAX(0, (int)(strlen(buf) - 1))] = 0;
 		for (i = 0; i < 8; i++) {
 			printf("reg%1d=%02x %s %s", i, regs[i],
-			    i == 7 ? buf : "",
-			    i == 7 ? "\n":" ");
+					i == 7 ? buf : "", i == 7 ? "\n":" ");
 		}
 	} while (fgets(buf, sizeof(buf), stdin));
+	return 0;
 }
