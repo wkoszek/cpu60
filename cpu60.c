@@ -9,9 +9,9 @@
 int
 main(int argc, char **argv)
 {
+	uint32_t	i, i0, i1, i2, v2, reset_perform;
 	uint8_t	regs[8];
 	char	buf[1000];
-	int	i, i0, i1, i2, v2, reset_perform;
 
 	reset_perform = 0;
 	if (argc == 2 && (strcmp(argv[1], "-r") == 0)) {
@@ -23,31 +23,31 @@ main(int argc, char **argv)
 
 	buf[0] = '\0';
 	do {
-		if (sscanf(buf, "mov r%d,r%d", &i0, &i1) == 2) {
+		if (sscanf(buf, "mov r%u,r%u", &i0, &i1) == 2) {
 			regs[i0 % 8] = regs[i1 % 8];
 		}
-		if (sscanf(buf, "add r%d,r%d,r%d", &i0, &i1, &i2) == 3) {
+		if (sscanf(buf, "add r%u,r%u,r%u", &i0, &i1, &i2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] + regs[i2 % 8];
 		}
-		if (sscanf(buf, "addi r%d,r%d,%d", &i0, &i1, &v2) == 3) {
+		if (sscanf(buf, "addi r%u,r%u,%u", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] + v2;
 		}
-		if (sscanf(buf, "sub r%d,r%d,r%d", &i0, &i1, &i2) == 3) {
+		if (sscanf(buf, "sub r%u,r%u,r%u", &i0, &i1, &i2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] - regs[i2 % 8];
 		}
-		if (sscanf(buf, "subi r%d,r%d,%d", &i0, &i1, &v2) == 3) {
+		if (sscanf(buf, "subi r%u,r%u,%u", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] - v2;
 		}
-		if (sscanf(buf, "and r%d,r%d,r%d", &i0, &i1, &i2) == 3) {
+		if (sscanf(buf, "and r%u,r%u,r%u", &i0, &i1, &i2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] & regs[i2 % 8];
 		}
-		if (sscanf(buf, "andi r%d,r%d,%d", &i0, &i1, &v2) == 3) {
+		if (sscanf(buf, "andi r%u,r%u,%u", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] & v2;
 		}
-		if (sscanf(buf, "or r%d,r%d,r%d", &i0, &i1, &i2) == 3) {
+		if (sscanf(buf, "or r%u,r%u,r%u", &i0, &i1, &i2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] | regs[i2 % 8];
 		}
-		if (sscanf(buf, "ori r%d,r%d,%d", &i0, &i1, &v2) == 3) {
+		if (sscanf(buf, "ori r%u,r%u,%u", &i0, &i1, &v2) == 3) {
 			regs[i0 % 8] = regs[i1 % 8] | v2;
 		}
 		buf[MAX(0, strlen(buf) - 1)] = 0;

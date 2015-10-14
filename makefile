@@ -1,6 +1,6 @@
 all: cpu60
 
-CFLAGS+= -Wall -pedantic
+CFLAGS+= -Wall -pedantic -Wextra -Werror
 
 cpu60:	cpu60.c
 	$(CC) $(CFLAGS) $< -o $@
