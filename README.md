@@ -48,3 +48,8 @@ Where file can have any valid opcodes.
 To unit test the model, hit:
 
 	make test
+
+# Author
+
+- Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
+- [http://www.koszek.com](http://www.koszek.com)
